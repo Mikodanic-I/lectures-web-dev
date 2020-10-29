@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.box-model {
+    position: absolute;
+    left: 43%;
+    top: 45%;
+
+    /*border*/
+    border: 5px solid cadetblue;
+    border-radius: 5px;
+
+    /*padding*/
+    padding: 20px 30px 20px 30px;
+}
+
+.box-model__text {
+    /*margin*/
+    margin: 10px 20px 10px 20px;
+
+    /*border*/
+    border: 5px solid #7e327a;
+    border-radius: 5px;
+
+    /*padding*/
+    padding: 10px 20px 10px 20px;
+}
