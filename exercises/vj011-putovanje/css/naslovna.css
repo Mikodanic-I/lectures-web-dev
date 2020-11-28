@@ -1,0 +1,12 @@
+.intro {
+    background-color: #5a478f;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 200px auto;
+}
+.intro__text {
+    text-align: center;
+    font-size: 25px;
+    padding: 40px 20px;
+    color: #FFF;
+}
