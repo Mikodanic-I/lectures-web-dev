@@ -40,19 +40,13 @@ div.content {
     .sidebar {
         width: 100%;
         height: auto;
-        position: relative;
+        position: fixed;
     }
-    .sidebar a {
-        float: left;
-    }
-    div.content {
-        margin-left: 0;
-    }
-}
-
-@media screen and (max-width: 400px) {
     .sidebar a {
         text-align: center;
         float: none;
+    }
+    div.content {
+        margin-left: 0;
     }
 }
