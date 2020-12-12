@@ -1,0 +1,61 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 3vh;
+    font-family: Pacifico, serif;
+}
+
+.sidebar a.active {
+    background-color: #4c79af;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    /*Override sidebar css*/
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+.sidebar hr {
+    margin: 0;
+    display: none;
+}
+
+.sidebar a:hover:not(.active):after {
+    content: url("../img/snowflake.svg");
+}
+
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+    }
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+@media screen and (min-width: 700px) {
+    .container {
+        margin-left: 200px;
+        padding: 0 16px;
+    }
+    .sidebar hr {
+        display: block;
+    }
+}
