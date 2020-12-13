@@ -43,7 +43,7 @@
     .sidebar {
         width: 100%;
         height: auto;
-        position: fixed;
+        position: relative;
     }
     .sidebar a {
         text-align: center;

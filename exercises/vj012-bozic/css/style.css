@@ -16,25 +16,69 @@ body {
 #header h1 {
     line-height: 100vh;
     text-align: center;
-    font-size: 10vw;
+    font-size: 12vh;
     margin: 0;
     color: #bf3b3b;
     font-family: 'ChristmasFont', serif;
 }
 
-
-.images__container {
-    margin-top: 15px;
-}
 .images__row {
     width: fit-content;
     margin: auto;
 }
 
+.images__row a {
+    text-decoration: none;
+}
 .images__row img {
     width: 30vw;
     height: auto;
     margin: 10px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-    transition: box-shadow, opacity 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.images__row img:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.movie__row {
+    width: fit-content;
+    margin: auto;
+}
+#movie_trailer {
+    width: 50vw;
+    height: 28vw;
+}
+
+.songs__row {
+    width: fit-content;
+    margin: auto;
+}
+
+.songs__row iframe {
+    width: 28vw;
+    height: 16vw;
+}
+
+
+@media screen and (max-width: 700px) {
+    #header h1 {
+        line-height: 30vh;
+    }
+    .images__row img {
+        width: 90vw;
+        display: block;
+    }
+    .songs__row iframe {
+        width: 90vw;
+        height: 51vw;
+        display: block;
+        margin: 10px 0;
+    }
+    #movie_trailer {
+        width: 90vw;
+        height: 51vw;
+        display: block;
+        margin: 10px 0;
+    }
 }
