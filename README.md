@@ -1,10 +1,12 @@
 # Skriptni jezici
-ELPROS Skriptni jezici
+### HTML, CSS, JavaScript
 
 ## Exercises
-- Exercise 07. _**Pjesma**_
-- Exercise 11. _**Putovanje**_
-- Exercise 13. _**Bozic**_
+- Exercise 07. _**Pjesma**_ (basics)
+- Exercise 11. _**Putovanje**_ (links)
+- Exercise 13. _**Bozic**_ (pseudoclasses, pseudoelements)
+- Exercise 14. _**Moj Osijek**_ (picutre, map) **NOT FINISHED**
+- Exercise 15. _**Värejä.**_ (svg, iframe)
 
 ## Cheatsheet
 - Fixed/relative & responsive **navbar**
