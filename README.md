@@ -7,6 +7,7 @@
 - Exercise 13. _**[Bozic](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj013-bozic)**_ (pseudoclasses, pseudoelements)
 - Exercise 14. _**[Moj Osijek](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj014-moj-osijek)**_ (picture, map, area)
 - Exercise 15. _**[Umjetnost](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj015-umjetnost)**_ (svg, iframe)
+- Exercise 16 & 17. _**[Raspored](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj016_017-raspored)**_ (border-box, tables)
 
 ## Cheatsheet
 - Fixed/relative & responsive **[Navbar](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/cheatsheet/navbar)**
