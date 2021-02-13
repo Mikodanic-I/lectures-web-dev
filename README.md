@@ -9,6 +9,7 @@
 - Exercise 15. _**[Umjetnost](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj015-umjetnost)**_ (svg, iframe)
 - Exercise 16 & 17. _**[Raspored](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj016_017-raspored)**_ (border-box, tables)
 - Exercise 18. _**[Gamification vs GBL](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj018-gamification-vs-gbl)**_ (flexbox, dl, ol, ul)
+- Exercise 19. _**[Toolbar](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj019-toolbar)**_ (display, css combinators)
 
 ## Cheatsheet
 - Fixed/relative & responsive **[Navbar](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/cheatsheet/navbar)**
