@@ -8,6 +8,7 @@
 - Exercise 14. _**[Moj Osijek](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj014-moj-osijek)**_ (picture, map, area)
 - Exercise 15. _**[Umjetnost](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj015-umjetnost)**_ (svg, iframe)
 - Exercise 16 & 17. _**[Raspored](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj016_017-raspored)**_ (border-box, tables)
+- Exercise 18. _**[Gamification vs GBL](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj018-gamification-vs-gbl)**_ (flexbox, dl, ol, ul)
 
 ## Cheatsheet
 - Fixed/relative & responsive **[Navbar](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/cheatsheet/navbar)**
