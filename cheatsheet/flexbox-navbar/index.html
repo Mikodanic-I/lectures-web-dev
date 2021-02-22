@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox navbar</title>
+
+  <style>
+      /*Navbar*/
+      .navbar {
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          background-color: #B5B2C2;
+      }
+
+      .navbar__item {
+          font-size: 18px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          padding: 0 15px;
+          text-decoration: none;
+          color: #232C33;
+          border-right: 1px solid #E9ECEE;
+
+          transition: background-color 0.3s;
+      }
+
+      .navbar__item:first-child {
+          border-left: 1px solid #E9ECEE;
+
+      }
+
+      .navbar__item:hover {
+          background-color: #3b3b3b;
+          color: #fff;
+          opacity: 70%;
+      }
+
+      @media screen and (max-width: 768px) {
+          .navbar {
+              flex-direction: column;
+              height: fit-content;
+          }
+          .navbar__item {
+              border-right: none;
+              border-left: none !important; /* Important because of .navbar__item:fist-child */
+              border-bottom: 1px solid #E9ECEE;
+
+              justify-content: center;
+              padding: 15px;
+          }
+      }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" class="navbar__item">
+      Podrijetlo hrvatskog jezika
+    </a>
+    <a href="#" class="navbar__item">
+      Narječja i dijalekti
+    </a>
+    <a href="#" class="navbar__item">
+      Izumrli europski jezici
+    </a>
+    <a href="#" class="navbar__item">
+      Utjecaj engleskog na hrvatski jezik
+    </a>
+  </nav>
+</body>
+</html>
