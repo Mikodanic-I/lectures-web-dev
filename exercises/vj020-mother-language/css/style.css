@@ -21,6 +21,7 @@ h1 {
     justify-content: center;
     position: fixed;
     top: 0;
+    z-index: 10;
 }
 
 .header__text {
@@ -49,6 +50,7 @@ h1 {
     top: 300px;
     width: 100%;
     background-color: #B5B2C2;
+    z-index: 10;
 }
 
 .navbar__item {

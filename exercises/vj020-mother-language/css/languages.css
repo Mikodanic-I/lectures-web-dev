@@ -1,0 +1,11 @@
+.content {
+    width: fit-content;
+    margin: 400px auto;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.content:hover {
+    opacity: 70%;
+}
