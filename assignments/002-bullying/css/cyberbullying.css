@@ -1,0 +1,31 @@
+.content {
+    height: 400px;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+}
+
+.content__table {
+    border: 3px solid #3b3b3b;
+    border-collapse: collapse;
+}
+
+.content__table th {
+    font-size: 36px;
+    border: 3px solid #3b3b3b;
+    padding: 10px;
+    background-color: #9c9c9c;
+}
+.content__table td {
+    border: 3px solid #3b3b3b;
+    padding: 10px;
+    font-size: 25px;
+    background-color: #fff;
+}
+
+.content__table__subheader th {
+    font-weight: bold;
+    position: sticky;
+    top: -2px;
+}

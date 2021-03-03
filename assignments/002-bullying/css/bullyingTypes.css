@@ -1,0 +1,39 @@
+.content__gallery {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr [col-start]);
+    grid-template-rows: repeat(3, 1fr [row-start]);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.gallery__item__img {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+
+}
+
+.gallery__item__img:hover {
+    filter: blur(7px);
+}
+
+.content__lists {
+    font-size: 20px;
+}
+
+.content {
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.unordered_list {
+    list-style-image: url("../img/hand-heart.svg");
+}
+
+.content__text {
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin: 10px 0;
+}
