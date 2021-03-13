@@ -10,7 +10,7 @@
 - Exercise 16 & 17. _**[Raspored](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj016_017-raspored)**_ (border-box, tables)
 - Exercise 18. _**[Gamification vs GBL](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj018-gamification-vs-gbl)**_ (flexbox, dl, ol, ul)
 - Exercise 19. _**[Toolbar](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj019-toolbar)**_ (display, css combinators)
-- Exercise 19. _**[Mother language](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj020-mother-language)**_ (display, positions, transparency, etc.)
+- Exercise 20. _**[Mother language](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj020-mother-language)**_ (display, positions, transparency, etc.)
 
 ## Cheatsheet
 - Fixed/relative & responsive **[Navbar](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/cheatsheet/navbar)**
@@ -19,3 +19,5 @@
 
 ## Assignments 
 - Assignment 01. _**[Simple website](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/assignments/001-simple-website)**_ **(17.11.2020)**
+- Assignment 02. _**[Bullying](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/assignments/002-bullying)**_ **(04.03.2021)**
+- Assignment 03. _**[Flu](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/assignments/003-flu)**_ **(09.03.2021)**

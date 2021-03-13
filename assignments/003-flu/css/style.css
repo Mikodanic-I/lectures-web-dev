@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/headerBackground.jpg");
+    height: 200px;
+}
+
+.header h1 {
+    margin-top: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+}
+
+.navigation {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2b406d;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+}
+
+.navigation__item {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 20px;
+    gap: 10px;
+}
+.content__image__container {
+    text-align: center;
+}
+.content__image {
+    width: 50%;
+    transition: opacity 0.3s;
+}
+.content__image:hover {
+    opacity: 0.7;
+}
+
+.content__item {
+    width: 45%;
+}
+.content__item h2 {
+    text-align: center;
+}
+.content__item p {
+    text-align: justify;
+}
+
+.footer {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    margin: 50px 20px 0 20px;
+}
+
+.footer__info p{
+    margin: 8px 0;
+}
+.footer__info a {
+    color: black;
+}
+
+/* statistika.html page */
+
+.statistic p {
+    text-align: justify;
+}
+
+.statistic h2 {
+    text-align: center;
+}
+
+.statistic__list {
+    text-align: left;
+    margin-left: 2vw;
+    list-style: upper-roman;
+}
+
+.statistic__table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.statistic__table tr, .statistic__table td, .statistic__table th {
+    border: 1px solid #1E3259;
+}
+
+.statistic__table__header {
+    background-color: #1E3259;
+    color: #fff;
+}
+
+.statistic__table td {
+    color: #1E3259;
+    padding: 2px 5px;
+}
+.statistic__table th {
+    padding: 5px 7px;
+    border-color: #fff;
+}
+.statistic__table tr:hover {
+    background-color: #1E3259;
+}
+.statistic__table tr:hover td {
+    color: #fff;
+}
