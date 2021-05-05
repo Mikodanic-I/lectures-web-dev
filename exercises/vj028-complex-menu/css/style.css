@@ -35,13 +35,20 @@ body {
     border: 1px solid #666666;
     margin: 0 20px;
     width: 200px;
+    height: 100%;
     justify-content: center;
+}
+
+.navbar__dropdown__wrapper {
+    position: relative;
 }
 
 .navbar__dropdown {
     position: absolute;
+    display: none;
     left: 0;
-    bottom: 0;
+    margin: 0 20px;
+    padding-top: 5px;
 }
 
 .navbar__dropdown__item {
@@ -57,10 +64,25 @@ body {
     border-radius: 10px;
     border: 1px solid #666666;
     width: 200px;
+    height: 50px;
     justify-content: center;
+    margin: 5px 0;
 }
 
 .navbar__item:hover {
+    background-color: orange;
+    color: #fff;
+}
+
+.navbar__item:hover ~ .navbar__dropdown {
+    display: block;
+}
+
+.navbar__dropdown:hover {
+    display: block;
+}
+
+.navbar__dropdown__item:hover {
     background-color: orange;
     color: #fff;
 }
@@ -83,8 +105,6 @@ body {
     }
 }
 
-
-/*:)*/
 .navbar {
     justify-content: center;
 }
