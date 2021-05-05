@@ -11,6 +11,7 @@
 - Exercise 18. _**[Gamification vs GBL](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj018-gamification-vs-gbl)**_ (flexbox, dl, ol, ul)
 - Exercise 19. _**[Toolbar](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj019-toolbar)**_ (display, css combinators)
 - Exercise 20. _**[Mother language](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj020-mother-language)**_ (display, positions, transparency, etc.)
+- Exercise 28. _**[Complex menu](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj028-complex-menu)**_ (display, positions, flexbox)
 
 ## Cheatsheet
 - Fixed/relative & responsive **[Navbar](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/cheatsheet/navbar)**
