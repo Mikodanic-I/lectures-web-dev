@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    background-color: #264653;
+    color: #FFFFFF;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+.header {
+    height: 300px;
+    width: 100%;
+    background-color: #2A9D8F;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.header__text {
+    height: fit-content;
+}
+
+.content {
+    display: flex;
+    position: relative;
+    font-size: 20px;
+    width: 70%;
+    margin: 400px auto 20px;
+}
+.content__text {
+    margin: 0 50px;
+}
+
+.content__image img {
+    width: 100%;
+}
+
+.content video, .content iframe {
+    margin: auto;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.footer__audio {
+    display: block;
+    margin: auto;
+}
+
+/*Navbar*/
+.navbar {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 300px;
+    width: 100%;
+    background-color: #E9C46A;
+    z-index: 10;
+}
+
+.navbar__item {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    border-right: 1px solid #E9ECEE;
+
+    transition: background-color 0.3s;
+}
+
+.navbar__item:first-child {
+    border-left: 1px solid #E9ECEE;
+
+}
+
+.navbar__item:hover {
+    background-color: #F4A261;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: fit-content;
+        position: sticky;
+        top: 0;
+    }
+    .navbar__item {
+        border-right: none;
+        border-left: none !important; /* Important because of .navbar__item:fist-child */
+        border-bottom: 1px solid #E9ECEE;
+
+        justify-content: center;
+        padding: 15px;
+    }
+    
+    .header {
+        position: relative;
+    }
+
+    .header__text {
+        font-size: 28px;
+    }
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .content__image {
+        display: block;
+        margin: auto;
+    }
+    .content__text {
+        order: 2;
+    }
+}
+
+.content__image img {
+    position: relative; /* :PP */
+}
