@@ -13,6 +13,7 @@
 - Exercise 20. _**[Mother language](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj020-mother-language)**_ (display, positions, transparency, etc.)
 - Exercise 26. _**[Multimedia](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj026-multimedia)**_ (multimedia, youtube, video, audio)
 - Exercise 28. _**[Complex menu](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj028-complex-menu)**_ (display, positions, flexbox)
+- Exercise 29. _**[Gallery grid](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/exercises/vj029-css-grid-gallery)**_ (grid, media queries)
 
 ## Cheatsheet
 - Fixed/relative & responsive **[Navbar](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/cheatsheet/navbar)**
