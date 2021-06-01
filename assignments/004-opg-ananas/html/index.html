@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OPG Ananas</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .carousel-open:checked + .carousel-item {
+            position: static;
+            opacity: 100;
+        }
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+        #carousel-1:checked ~ .control-1,
+        #carousel-2:checked ~ .control-2,
+        #carousel-3:checked ~ .control-3 {
+            display: block;
+        }
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+        }
+    </style>
+</head>
+<body>
+<nav class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMenu()">
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Icon when menu is closed.
+
+                      Heroicon name: outline/menu
+
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!--
+                      Icon when menu is open.
+
+                      Heroicon name: outline/x
+
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="block lg:hidden h-8 w-auto" src="../img/logo.png" alt="Logo">
+                    <img class="hidden lg:block h-8 w-auto" src="../img/logo.png" alt="Logo">
+                    <span class="hidden lg:block text-white font-medium text-lg ml-3">OPG Ananas</span>
+                </div>
+                <div class="hidden sm:block sm:ml-6">
+                    <div class="flex space-x-4">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="../html/index.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Naslovna</a>
+
+                        <a href="proizvodi.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Proizvodi</a>
+
+                        <a href="lokacija.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Lokacija</a>
+
+                        <a href="savijeti.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Savijeti</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="../html/index.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Naslovna</a>
+
+            <a href="proizvodi.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Proizvodi</a>
+
+            <a href="lokacija.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Lokacija</a>
+
+            <a href="savijeti.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Savijeti</a>
+        </div>
+    </div>
+</nav>
+<!-- CAROUSEL -->
+<div class="carousel relative shadow-2xl bg-white">
+	<div class="carousel-inner relative overflow-hidden w-full">
+	  <!--Slide 1-->
+		<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+		<div class="carousel-item absolute opacity-0" style="height:60vh;">
+			<div class="block h-full w-full bg-indigo-500 text-white">
+                <img src="../img/pineapple1.jpg" alt="Pineapple img" class="w-full h-full">
+            </div>
+		</div>
+		<label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+		
+		<!--Slide 2-->
+		<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:60vh;">
+			<div class="block h-full w-full bg-indigo-500 text-white">
+                <img src="../img/pineapple2.jpg" alt="Pineapple img" class="w-full h-full">
+            </div>
+		</div>
+		<label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+		
+		<!--Slide 3-->
+		<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:60vh;">
+            <div class="block h-full w-full bg-indigo-500 text-white">
+                <img src="../img/pineapple3.jpg" alt="Pineapple img" class="w-full h-full">
+            </div>
+		</div>
+		<label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+		<!-- Add additional indicators for each slide-->
+		<ol class="carousel-indicators">
+			<li class="inline-block mr-3">
+				<label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+		</ol>
+		
+	</div>
+</div>
+
+<!-- CARDS -->
+<div class="flex flex-col md:flex-row items-center gap-10 justify-between">
+    <div class="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden mt-10">
+        <div class="w-1/3 bg-cover bg-landscape">
+            <img src="../img/pineapple1.jpg" alt="">
+        </div>
+        <div class="w-2/3 p-4">
+            <h1 class="text-gray-900 font-bold text-2xl">
+                Cool Ananas
+            </h1>
+            <p class="mt-2 text-gray-600 text-sm">
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden mt-10">
+        <div class="w-1/3 bg-cover bg-landscape">
+            <img src="../img/pineapple1.jpg" alt="">
+        </div>
+        <div class="w-2/3 p-4">
+            <h1 class="text-gray-900 font-bold text-2xl">
+                Cool Ananas
+            </h1>
+            <p class="mt-2 text-gray-600 text-sm">
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden mt-10">
+        <div class="w-1/3 bg-cover bg-landscape">
+            <img src="../img/pineapple1.jpg" alt="">
+        </div>
+        <div class="w-2/3 p-4">
+            <h1 class="text-gray-900 font-bold text-2xl">
+                Cool Ananas
+            </h1>
+            <p class="mt-2 text-gray-600 text-sm">
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden mt-10">
+        <div class="w-1/3 bg-cover bg-landscape">
+            <img src="../img/pineapple1.jpg" alt="">
+        </div>
+        <div class="w-2/3 p-4">
+            <h1 class="text-gray-900 font-bold text-2xl">
+                Cool Ananas
+            </h1>
+            <p class="mt-2 text-gray-600 text-sm">
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+                You can&#x27;t buy your future, but you can do it. Money is nothing, you&#x27;r everything.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="bg-white dark:bg-gray-800 pt-4 pb-8 xl:pt-8 mt-14">
+    <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 text-gray-400 dark:text-gray-300">
+        <ul class="text-lg font-light pb-8 flex flex-wrap justify-center">
+            <li class="w-1/2 md:w-1/3 lg:w-1/3">
+                <div class="text-center">
+                    <h2 class="text-gray-500 dark:text-gray-200 text-md uppercase mb-4">
+                        Kontakt
+                    </h2>
+                    <ul>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="tel:+385123123123123">
+                                +385 123123123123
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="mailto:opgananas@gmail.com">
+                                opgananas@gmail.com
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                                Pon - Pet 16-20h
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="pt-8 flex border-t border-gray-200 max-w-xs mx-auto items-center justify-between">
+            <a href="#">
+                <svg width="20" height="20" fill="currentColor" class="text-xl hover:text-gray-800 dark:hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#">
+                <svg width="20" height="20" fill="currentColor" class="text-xl hover:text-gray-800 dark:hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#">
+                <svg width="20" height="20" fill="currentColor" class="text-xl hover:text-gray-800 dark:hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1551 1476q15-6 26-3t11 17.5-15 33.5q-13 16-44 43.5t-95.5 68-141 74-188 58-229.5 24.5q-119 0-238-31t-209-76.5-172.5-104-132.5-105-84-87.5q-8-9-10-16.5t1-12 8-7 11.5-2 11.5 4.5q192 117 300 166 389 176 799 90 190-40 391-135zm207-115q11 16 2.5 69.5t-28.5 102.5q-34 83-85 124-17 14-26 9t0-24q21-45 44.5-121.5t6.5-98.5q-5-7-15.5-11.5t-27-6-29.5-2.5-35 0-31.5 2-31 3-22.5 2q-6 1-13 1.5t-11 1-8.5 1-7 .5h-10l-3-.5-2-1.5-1.5-3q-6-16 47-40t103-30q46-7 108-1t76 24zm-394-443q0 31 13.5 64t32 58 37.5 46 33 32l13 11-227 224q-40-37-79-75.5t-58-58.5l-19-20q-11-11-25-33-38 59-97.5 102.5t-127.5 63.5-140 23-137.5-21-117.5-65.5-83-113-31-162.5q0-84 28-154t72-116.5 106.5-83 122.5-57 130-34.5 119.5-18.5 99.5-6.5v-127q0-65-21-97-34-53-121-53-6 0-16.5 1t-40.5 12-56 29.5-56 59.5-48 96l-294-27q0-60 22-119t67-113 108-95 151.5-65.5 190.5-24.5q100 0 181 25t129.5 61.5 81 83 45 86 12.5 73.5v589zm-672 21q0 86 70 133 66 44 139 22 84-25 114-123 14-45 14-101v-162q-59 2-111 12t-106.5 33.5-87 71-32.5 114.5z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+        <div class="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
+            Created by Peroo Peric xD
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const mobileMenu = document.getElementById('mobile-menu')
+
+        mobileMenu.classList.toggle('hidden')
+    }
+</script>
+</body>
+</html>
