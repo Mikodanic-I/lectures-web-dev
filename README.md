@@ -25,3 +25,4 @@
 - Assignment 01. _**[Simple website](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/assignments/001-simple-website)**_ **(17.11.2020)**
 - Assignment 02. _**[Bullying](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/assignments/002-bullying)**_ **(04.03.2021)**
 - Assignment 03. _**[Flu](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/assignments/003-flu)**_ **(09.03.2021)**
+- Assignment 04. _**[OPG Ananas](https://github.com/Mikodanic-I/lectures-web-dev/tree/master/assignments/004-opg-ananas)**_ **(10.06.2021)**
